@@ -54,3 +54,17 @@ const sorted = people.sort((a, b) => {
   return aLast < bLast ? -1 : 1
 });
 
+// 8. Reduce Exercise
+// Sum up the instances of each of these
+
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 
+'walk', 'car', 'van', 'car', 'truck'
+];
+
+const sumUp = data.reduce((obj, item) => {
+  if (!obj[item]) {
+    obj[item] = 0
+  }
+  obj[item]++
+  return obj;
+}, {})
