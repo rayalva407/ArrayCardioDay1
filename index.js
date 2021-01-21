@@ -45,3 +45,12 @@ https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 const category = document.querySelector('.mw-category');
 const links = Array.from(category.querySelectorAll('a'));
 const de = links.map(link => link.innerText).filter(text => text.includes('de'));
+
+// 7. sort Exercise
+// Sort the people alphabetically by last name
+const sorted = people.sort((a, b) => {
+  const [aLast, aFirst] = a.split(', ')
+  const [bLast, bFirst] = b.split(', ')
+  return aLast < bLast ? -1 : 1
+});
+
