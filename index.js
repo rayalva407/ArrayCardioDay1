@@ -26,3 +26,7 @@ const fifHundreds = inventors.filter(inventor => inventor.year >= 1500 && invent
 // Array.prototype.map()
 // 2. Give us an array of the inventory first and last names
 const firstLastMap = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
+
+//Array.prototype.sort()
+// 3. Sort the inventors by birthdate, oldest to youngest
+const birthSort = inventors.sort((a, b) => a.year - b.year)
