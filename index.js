@@ -39,3 +39,9 @@ const addYears = inventors.reduce((acc, value) => (acc + (value.passed - value.y
 const yearsLivedSort = inventors.sort((a, b) => {
   return (a.passed - a.year) < (b.passed - b.year) ? 1 : -1
 })
+
+// 6. Create a list of Boulevards in Paris that contains 'de' anywhere in the name
+https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+const category = document.querySelector('.mw-category');
+const links = Array.from(category.querySelectorAll('a'));
+const de = links.map(link => link.innerText).filter(text => text.includes('de'));
