@@ -30,3 +30,7 @@ const firstLastMap = inventors.map(inventor => `${inventor.first} ${inventor.las
 //Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
 const birthSort = inventors.sort((a, b) => a.year - b.year)
+
+//Array.prototype.reduce()
+// 4. How many years did all the inventors live?
+const addYears = inventors.reduce((acc, value) => (acc + (value.passed - value.year)), 0)
