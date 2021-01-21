@@ -34,3 +34,8 @@ const birthSort = inventors.sort((a, b) => a.year - b.year)
 //Array.prototype.reduce()
 // 4. How many years did all the inventors live?
 const addYears = inventors.reduce((acc, value) => (acc + (value.passed - value.year)), 0)
+
+// 5. Sort the inventors by years lived
+const yearsLivedSort = inventors.sort((a, b) => {
+  return (a.passed - a.year) < (b.passed - b.year) ? 1 : -1
+})
